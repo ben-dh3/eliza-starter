@@ -1,15 +1,16 @@
 import { DiscordClient } from "@elizaos/client-discord";
-import { Character, Clients, defaultCharacter, ModelProviderName } from "@elizaos/core";
+import { Character, Clients, defaultCharacter, ModelClass, ModelProviderName } from "@elizaos/core";
 import zapperPlugin from "@elizaos/plugin-zapper";
 
 export const character: Character = {
         "name": "Dobby",
         "clients": [Clients.DISCORD],
-        "modelProvider": ModelProviderName.OPENAI,
+        "modelProvider": ModelProviderName.ANTHROPIC,
         "settings": {
             "voice": {
                 "model": "en_GB-danny-low"
-            }
+            },
+            "model": ModelClass.SMALL
         },
         "plugins": [zapperPlugin],
         "bio": [
